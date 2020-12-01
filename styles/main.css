@@ -3,7 +3,7 @@
     height: 1000px;
     border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
     border: 5px solid #1c446b;
-    background: #ae00ff;
+    background: plum;
     display: block;
     position: absolute;
     top: 55%;
@@ -11,4 +11,43 @@
     margin-right: 50%;
     transform: translate(-33%, -50%) rotate(-45deg);
 }
-  
+.display {
+    width: 400px;
+    height: 675px;
+    position: absolute;
+    top: 42%;
+    left: 51%;
+    margin-right: 50%;
+    background-color: rgb(221, 221, 221);
+    transform: translate(-33%, -50%) rotate(-45deg);
+}
+#displayCat {  
+    transform: translate(-.5%, 32.5%) rotate(90deg);
+    max-height: 400px;
+}
+#column {
+    float: left;
+    column-count: 1;
+    column-width: 250px;
+    column-rule: 5px solid black;
+    background: rgba(0, 0, 0, 0.418)
+}
+.vertLine {
+    border-left: 5px solid rgb(0, 0, 0);
+    height: 100%;
+    display: block;
+    float: right;
+  }
+  h1 {
+      text-align: left;
+      font-family: 'Source Code Pro', monospace;
+      color: white;
+  }
+  h2 {
+      text-align: right;
+      font-family: 'Source Code Pro', monospace;
+      color: white;
+  }
+  body {
+    background-color: rgb(107, 158, 253);
+  }

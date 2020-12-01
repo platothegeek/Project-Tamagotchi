@@ -6,5 +6,6 @@ USER STORIES
 3) As time goes on my Tamagochi's hunger, boredom, and tiredness worsen, but the exact time it takes varies between 2-10 seconds.
 4) At age 20 and 40, my Tamagochi's animation changes to indicate ageing.
 5) When I press the Feed, Sleep, or Play buttons it resets the respective counters to 0.
+<br>
 TECH USED
 
