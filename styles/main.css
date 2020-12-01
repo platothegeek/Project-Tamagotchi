@@ -1,0 +1,14 @@
+.egg{
+    width: 1000px;
+    height: 1000px;
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    border: 5px solid #1c446b;
+    background: #ae00ff;
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-33%, -50%) rotate(-45deg);
+}
+  
