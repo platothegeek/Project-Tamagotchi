@@ -21,6 +21,27 @@
     background-color: rgb(221, 221, 221);
     transform: translate(-33%, -50%) rotate(-45deg);
 }
+button {
+    display: block;
+    float: left;
+    border-radius: 25px;
+    min-width: 50px;
+    min-height: 100px;
+    transform: translate(430%, 400%);
+    margin: 5%;
+    cursor: pointer;
+    border: 3px solid rgb(191, 123, 223);
+    background-color: purple;
+}
+#buttonRow {
+    transform: rotate(45deg);
+}
+.label {
+    transform: translate( 0%, 175%);
+    font-size: 35px;
+    color: whitesmoke;
+    font-family: 'Nerko One', cursive;
+}
 #displayCat {  
     transform: translate(-.5%, 32.5%) rotate(90deg);
     max-height: 400px;
