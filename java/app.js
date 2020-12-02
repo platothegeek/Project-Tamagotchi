@@ -10,6 +10,8 @@ let myTama = {
     noSleep: 0,
     noFun: 0,
     gameBegin: function gameBegin() {
+        myTama.name = $("#tamaNameInput").val();
+        $("#tamaName").html("<h2 id='tamaAge'>" + myTama.name + "&nbsp;</h2>");
         myTama.ager = setInterval(ageUp,20000);
         myTama.noFood = setInterval(addHung, 2500);
         myTama.noSleep = setInterval(addTired, 7500);
