@@ -1,7 +1,7 @@
 .egg{
     width: 1000px;
     height: 1000px;
-    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    border-radius: 80% 25% 55% 50% / 55% 25% 80% 50%;
     border: 5px solid #1c446b;
     background: plum;
     display: block;
@@ -12,14 +12,14 @@
     transform: translate(-33%, -50%) rotate(-45deg);
 }
 .display {
-    width: 400px;
+    width: 425px;
     height: 675px;
     position: absolute;
     top: 42%;
     left: 51%;
     margin-right: 50%;
     background-color: rgb(221, 221, 221);
-    transform: translate(-33%, -50%) rotate(-45deg);
+    transform: translate(-35%, -49%) rotate(-45deg);
 }
 button {
     display: block;
@@ -32,6 +32,12 @@ button {
     cursor: pointer;
     border: 3px solid rgb(191, 123, 223);
     background-color: purple;
+    outline: none;
+}
+button:active {
+    background-color: rgb(191, 123, 223);
+    outline: none;
+    border: none;
 }
 #buttonRow {
     transform: rotate(45deg);
@@ -44,7 +50,11 @@ button {
 }
 #displayCat {  
     transform: translate(-.5%, 32.5%) rotate(90deg);
-    max-height: 400px;
+    max-height: 425px;
+}
+#displayDead {
+    transform: translate(3.25%, 32.5%) rotate(90deg);
+    max-height: 425px;
 }
 #column {
     float: left;
