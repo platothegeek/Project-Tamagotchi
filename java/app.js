@@ -10,9 +10,13 @@ let myTama = {
     noSleep: 0,
     noFun: 0,
     gameBegin: function gameBegin() {
+        myTama.age=0;
+        myTama.hunger=0;
+        myTama.sleep=0;
+        myTama.bored=0;
         myTama.name = $("#tamaNameInput").val();
-        $("#tamaName").html("<h2 id='tamaAge'>" + myTama.name + "&nbsp;</h2>");
-        myTama.ager = setInterval(ageUp,20000);
+        $("#tamaName").html("<h2 id='tamaName'>" + myTama.name + "&nbsp;</h2>");
+        myTama.ager = setInterval(ageUp,20);
         myTama.noFood = setInterval(addHung, 2500);
         myTama.noSleep = setInterval(addTired, 7500);
         myTama.noFun = setInterval(addBored, (rand + 1000));
@@ -40,13 +44,16 @@ addBored = function addBored() {
     checkVitals();
 }
 checkVitals = function checkVitals() {
-    if (myTama.age>=60) {
+    if (myTama.age==30){
+        $(".display").html("<img src='https://media4.giphy.com/media/7Cr71vflxfGFO/source.gif' alt='Kitten Gif' id='displayCat'>")
+    }
+    else if (myTama.age>=60) {
         clearInterval(myTama.ager);
         clearInterval(myTama.noFood);
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
-        $("#deadNotification").html(myTama.name + " died of old age. This is the best you could've hope for. More death. You 'win'")
+        $("#deadNotification").html(myTama.name + " died of old age.<br>You 'win'.")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
     else if (myTama.hunger>=10) {
@@ -55,7 +62,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
-        $("#deadNotification").html(myTama.name + " died of starvation. <br>You've been arrested for neglect and animal abuse.")
+        $("#deadNotification").html(myTama.name + " died of starvation. <br>You've been arrested for animal cruelty.")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
     else if (myTama.sleep>=10) {
@@ -73,7 +80,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
-        $("#deadNotification").html(myTama.name + "died of boredom. <br> You literally made " + myTama.name + "'s life so miserable he died.")
+        $("#deadNotification").html(myTama.name + " literally died of boredom. <br> You  made " + myTama.name + "'s life so miserable he died.")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
 }

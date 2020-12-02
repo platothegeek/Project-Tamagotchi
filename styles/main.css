@@ -49,16 +49,22 @@ button:active {
     color: whitesmoke;
     font-family: 'Nerko One', cursive;
 }
+#displayKitten {  
+    transform: translate(-.5%, 32.5%) rotate(90deg);
+    max-height: 425px;
+}
 #displayCat {  
     transform: translate(-.5%, 32.5%) rotate(90deg);
     max-height: 425px;
 }
 #displayDead {
-    transform: translate(3.25%, 32.5%) rotate(90deg);
+    transform: translate(5%, 32.5%) rotate(90deg);
     max-height: 425px;
 }
 #column {
+    position: static;
     float: left;
+    border-right: 5px solid black;
     column-count: 1;
     column-width: 250px;
     column-rule: 5px solid black;
@@ -88,12 +94,6 @@ input {
     font-family: 'Source Code Pro', monospace;
     font-weight: bold;
 }
-.vertLine {
-    border-left: 5px solid rgb(0, 0, 0);
-    height: 100%;
-    display: block;
-    float: right;
-  }
   h1 {
       text-align: left;
       font-family: 'Source Code Pro', monospace;
@@ -108,10 +108,12 @@ input {
       font-weight: bold;
   }
   h3 {
-      font-size: 50px;
-      color: #800020;
-      display: block;
-      float: right;
+    min-width: 50%;
+    display: block;
+    font-size: 50px;
+    color: #800020;
+    margin-right: 50%;
+    font-family: 'Source Code Pro', monospace;
   }
   body {
     background-color: rgb(107, 158, 253);
