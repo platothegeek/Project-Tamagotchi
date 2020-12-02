@@ -77,3 +77,18 @@ checkVitals = function checkVitals() {
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
 }
+clearHung = function clearHung() {
+    myTama.hunger = 0;
+    $("#tamaHungies").html("<h2 id='tamaHungies'>" + (myTama.hunger) + "&nbsp;</h2>")
+}
+clearTired = function clearTired() {
+    myTama.sleep = 0;
+    $("#tamaSleepies").html("<h2 id='tamaSleepies'>" + (myTama.sleep) + "&nbsp;</h2>")
+}
+clearBored = function clearBored() {
+    myTama.bored = 0;
+    $("#tamaBoredom").html("<h2 id='tamaBoredom'>" + (myTama.bored) + "&nbsp;</h2>")
+}
+$("#foodButton").click(clearHung);
+$("#sleepButton").click(clearTired);
+$("#playButton").click(clearBored);
