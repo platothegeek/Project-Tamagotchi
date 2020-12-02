@@ -71,6 +71,13 @@ button:active {
     column-rule: 5px solid black;
     background: rgba(0, 0, 0, 0.418)
 }
+.tamaValue {
+    margin-top: -15%;
+}
+.progBar {
+    height: 30px;
+    width: 210px;
+}
 #startButton {
     border: 3px solid rgb(191, 123, 223);
     transform: rotate(90deg) translate(-10%, -150%);

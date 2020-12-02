@@ -29,17 +29,20 @@ ageUp = function ageUP() {
     checkVitals();
 }
 addHung = function addHung() {
-    $("#tamaHungies").html("<h2 id='tamaHungies'>" + (myTama.hunger+1) + "&nbsp;</h2>")
+    $("#tamaHungies").html("<h2 id='tamaHungies'>" + (myTama.hunger+1) + "&nbsp;</h2>");
+    $("#tamaHungiesBar").val((myTama.hunger * 10)+10);
     myTama.hunger = myTama.hunger + 1;
     checkVitals();
 }
 addTired = function addTired() {
     $("#tamaSleepies").html("<h2 id='tamaSleepies'>" + (myTama.sleep+1) + "&nbsp;</h2>")
+    $("#tamaSleepiesBar").val((myTama.sleep *10) + 10);
     myTama.sleep = myTama.sleep + 1;
     checkVitals();
 }
 addBored = function addBored() {
     $("#tamaBoredom").html("<h2 id='tamaBoredom'>" + (myTama.bored+1) + "&nbsp;</h2>")
+    $("#tamaBoredomBar").val((myTama.bored *10) + 10);
     myTama.bored = myTama.bored + 1;
     checkVitals();
 }
@@ -96,14 +99,17 @@ checkVitals = function checkVitals() {
 }
 clearHung = function clearHung() {
     myTama.hunger = 0;
+    $("#tamaHungiesBar").val(1);
     $("#tamaHungies").html("<h2 id='tamaHungies'>" + (myTama.hunger) + "&nbsp;</h2>")
 }
 clearTired = function clearTired() {
     myTama.sleep = 0;
+    $("#tamaSleepiesBar").val(1);
     $("#tamaSleepies").html("<h2 id='tamaSleepies'>" + (myTama.sleep) + "&nbsp;</h2>")
 }
 clearBored = function clearBored() {
     myTama.bored = 0;
+    $("#tamaBoredomBar").val(1);
     $("#tamaBoredom").html("<h2 id='tamaBoredom'>" + (myTama.bored) + "&nbsp;</h2>")
 }
 $("#foodButton").click(clearHung);
