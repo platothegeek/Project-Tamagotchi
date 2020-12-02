@@ -16,7 +16,7 @@ let myTama = {
         myTama.bored=0;
         myTama.name = $("#tamaNameInput").val();
         $("#tamaName").html("<h2 id='tamaName'>" + myTama.name + "&nbsp;</h2>");
-        myTama.ager = setInterval(ageUp,20);
+        myTama.ager = setInterval(ageUp,2000);
         myTama.noFood = setInterval(addHung, 2500);
         myTama.noSleep = setInterval(addTired, 7500);
         myTama.noFun = setInterval(addBored, (rand + 1000));
@@ -45,7 +45,17 @@ addBored = function addBored() {
 }
 checkVitals = function checkVitals() {
     if (myTama.age==30){
+        $("#deadNotification").html(myTama.name + " is getting older.")
         $(".display").html("<img src='https://media4.giphy.com/media/7Cr71vflxfGFO/source.gif' alt='Kitten Gif' id='displayCat'>")
+    }
+    else if(myTama.bored==7){
+        $("#deadNotification").html(myTama.name + "'s boredom is dangerously high.")
+    }
+    else if(myTama.hunger==7){
+        $("#deadNotification").html(myTama.name + " is dangerously close to starving.")
+    }
+    else if(myTama.sleep==7){
+        $("#deadNotification").html(myTama.name + " is very tired, let him sleep.")
     }
     else if (myTama.age>=60) {
         clearInterval(myTama.ager);
