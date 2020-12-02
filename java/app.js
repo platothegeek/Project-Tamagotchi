@@ -1,5 +1,6 @@
 rand = (Math.floor((Math.random() * 4000)));
 let myTama = {
+    name: 0,
     age: 0,
     hunger: 0,
     sleep: 0,
@@ -42,6 +43,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
+        
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
     else if (myTama.hunger>=10) {
@@ -50,6 +52,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
+        $("#deadNotification").html("died!")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
     else if (myTama.sleep>=10) {
@@ -58,6 +61,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
+        $("#deadNotification").html("died!")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
     else if (myTama.bored>=10) {
@@ -66,6 +70,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
+        $("#deadNotification").html("died!")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
 }
