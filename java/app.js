@@ -46,7 +46,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
-        
+        $("#deadNotification").html(myTama.name + " died of old age. This is the best you could've hope for. More death. You 'win'")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
     else if (myTama.hunger>=10) {
@@ -55,7 +55,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
-        $("#deadNotification").html("died!")
+        $("#deadNotification").html(myTama.name + " died of starvation. <br>You've been arrested for neglect and animal abuse.")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
     else if (myTama.sleep>=10) {
@@ -64,7 +64,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
-        $("#deadNotification").html("died!")
+        $("#deadNotification").html(myTama.name + " died of exhaustion.<br> You should've let him sleep.")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
     else if (myTama.bored>=10) {
@@ -73,7 +73,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
-        $("#deadNotification").html("died!")
+        $("#deadNotification").html(myTama.name + "died of boredom. <br> You literally made " + myTama.name + "'s life so miserable he died.")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
 }
