@@ -16,6 +16,7 @@ let myTama = {
         myTama.noFun = setInterval(addBored, (rand + 1000));
     }
 }
+$("#startButton").click(myTama.gameBegin);
 ageUp = function ageUP() {
     $("#tamaAge").html("<h2 id='tamaAge'>" + (myTama.age+1) + "&nbsp;</h2>");
     myTama.age = myTama.age + 1;
