@@ -59,7 +59,7 @@ button:active {
     max-height: 425px;
 }
 #displayDead {
-    transform: translate(5%, 32.5%) rotate(90deg);
+    transform: translate(3.25%, 32.5%) rotate(90deg);
     max-height: 425px;
 }
 #column {
@@ -71,12 +71,29 @@ button:active {
     column-rule: 5px solid black;
     background: rgba(0, 0, 0, 0.418)
 }
-.tamaValue {
-    margin-top: -15%;
+.progressbar {
+    background-color: whitesmoke;
+    border-radius: 13px;
+    padding: 3px;
+    min-width: 250px;
+    max-width: 250px;
 }
-.progBar {
-    height: 30px;
-    width: 210px;
+#ageBar {
+    width: 0;
+}
+.progressbar>div {
+    background-color: rgb(191, 123, 223);
+    height: 20px;
+    border-radius: 10px;
+}
+#sleepBar>div {
+    width: 0;
+}
+#boredBar>div {
+    width: 0;
+}
+#hungerBar>div {
+    width: 0;
 }
 #startButton {
     border: 3px solid rgb(191, 123, 223);
