@@ -78,13 +78,14 @@ button:active {
     min-width: 250px;
     max-width: 250px;
 }
-#ageBar {
-    width: 0;
-}
+
 .progressbar>div {
     background-color: rgb(191, 123, 223);
     height: 20px;
     border-radius: 10px;
+}
+#ageBar>div {
+    width: 0%;
 }
 #sleepBar>div {
     width: 0;

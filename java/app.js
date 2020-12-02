@@ -100,16 +100,22 @@ checkVitals = function checkVitals() {
 }
 clearHung = function clearHung() {
     myTama.hunger = 0;
+    let audio = document.getElementById("munch");
+    audio.play();
     $("#hungerBar").width(0);
     $("#tamaHungies").html("<h2 id='tamaHungies'>" + (myTama.hunger) + "&nbsp;</h2>")
 }
 clearTired = function clearTired() {
     myTama.sleep = 0;
+    let audio = document.getElementById("yawn");
+    audio.play();
     $("#sleepBar").width(0);
     $("#tamaSleepies").html("<h2 id='tamaSleepies'>" + (myTama.sleep) + "&nbsp;</h2>")
 }
 clearBored = function clearBored() {
     myTama.bored = 0;
+    let audio = document.getElementById("yay");
+    audio.play();
     $("#boredBar").width(0);
     $("#tamaBoredom").html("<h2 id='tamaBoredom'>" + (myTama.bored) + "&nbsp;</h2>")
 }
