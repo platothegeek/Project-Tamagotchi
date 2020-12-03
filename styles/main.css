@@ -62,6 +62,14 @@ button:active {
     transform: translate(3.25%, 32.5%) rotate(90deg);
     max-height: 425px;
 }
+#displayDog {
+    transform: translate(0%, 32.5%) rotate(90deg);
+    max-height: 425px;
+}
+#displayOldDog {  
+    transform: translate(-.5%, 32.5%) rotate(90deg);
+    max-height: 425px;
+}
 #column {
     position: static;
     float: left;
@@ -78,7 +86,6 @@ button:active {
     min-width: 250px;
     max-width: 250px;
 }
-
 .progressbar>div {
     background-color: rgb(191, 123, 223);
     height: 20px;
@@ -99,6 +106,13 @@ button:active {
 #startButton {
     border: 3px solid rgb(191, 123, 223);
     transform: rotate(90deg) translate(-10%, -150%);
+}
+#easterEggButton {
+    max-width: 25px;
+    max-height: 25px;
+    min-width: 0px;
+    min-height: 0px;
+    transform: translate(5000%, 20000%);
 }
 #startLabel {
     transform: rotate(-90deg) translate(-50%, 100%);
@@ -143,4 +157,5 @@ input {
   }
   body {
     background-color: rgb(107, 158, 253);
+    overflow-x: hidden;
   }

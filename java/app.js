@@ -1,4 +1,6 @@
 rand = (Math.floor((Math.random() * 400)));
+let screenWidth = window.outerWidth;
+
 let myTama = {
     name: 0,
     age: 0,
@@ -16,7 +18,7 @@ let myTama = {
         myTama.bored=0;
         myTama.name = $("#tamaNameInput").val();
         $("#tamaName").html("<h2 id='tamaName'>" + myTama.name + "&nbsp;</h2>");
-        myTama.ager = setInterval(ageUp,2000);
+        myTama.ager = setInterval(ageUp,200);
         myTama.noFood = setInterval(addHung, 250);
         myTama.noSleep = setInterval(addTired, 750);
         myTama.noFun = setInterval(addBored, (rand + 100));
@@ -50,7 +52,8 @@ addBored = function addBored() {
 checkVitals = function checkVitals() {
     if (myTama.age==50){
         $("#deadNotification").html(myTama.name + " is getting older.")
-        $(".display").html("<img src='https://media4.giphy.com/media/7Cr71vflxfGFO/source.gif' alt='Kitten Gif' id='displayCat'>")
+        $("#displayKitten").replaceWith("<img src='https://media4.giphy.com/media/7Cr71vflxfGFO/source.gif' alt='Kitten Gif' id='displayCat'>")
+        $("#displayDog").replaceWith("<img src='https://i.gifer.com/1LFX.gif' alt='Kitten Gif' id='displayOldDog'>")
     }
     else if(myTama.bored==85){
         $("#deadNotification").html(myTama.name + "'s boredom is dangerously high.")
@@ -119,6 +122,14 @@ clearBored = function clearBored() {
     $("#boredBar").width(0);
     $("#tamaBoredom").html("<h2 id='tamaBoredom'>" + (myTama.bored) + "&nbsp;</h2>")
 }
+resize = function resize() {
+    $("body").width(screenWidth);
+}
+easterEgg = function easterEgg() {
+    $(".display").html("<img src='https://data.whicdn.com/images/283530751/original.gif' alt='Kitten Gif' id='displayDog'>")
+}
 $("#foodButton").click(clearHung);
 $("#sleepButton").click(clearTired);
 $("#playButton").click(clearBored);
+$("#easterEggButton").click(easterEgg);
+resize();
