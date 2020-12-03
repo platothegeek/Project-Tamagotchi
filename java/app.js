@@ -24,7 +24,7 @@ let myTama = {
         myTama.noFood = setInterval(addHung, 250);
         myTama.noSleep = setInterval(addTired, 750);
         myTama.noFun = setInterval(addBored, (rand + 100));
-        myTama.meow = setInterval(playMeow, 70);
+        myTama.meow = setInterval(playMeow, 70000);
     }
 }
 $("#startButton").click(myTama.gameBegin);
