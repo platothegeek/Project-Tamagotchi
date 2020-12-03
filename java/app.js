@@ -2,6 +2,7 @@ rand = (Math.floor((Math.random() * 400)));
 let screenWidth = window.outerWidth;
 
 let myTama = {
+    dog: "no",
     name: 0,
     age: 0,
     hunger: 0,
@@ -11,6 +12,7 @@ let myTama = {
     noFood: 0,
     noSleep: 0,
     noFun: 0,
+    meow: 0,
     gameBegin: function gameBegin() {
         myTama.age=0;
         myTama.hunger=0;
@@ -18,13 +20,24 @@ let myTama = {
         myTama.bored=0;
         myTama.name = $("#tamaNameInput").val();
         $("#tamaName").html("<h2 id='tamaName'>" + myTama.name + "&nbsp;</h2>");
-        myTama.ager = setInterval(ageUp,200);
+        myTama.ager = setInterval(ageUp,20000);
         myTama.noFood = setInterval(addHung, 250);
         myTama.noSleep = setInterval(addTired, 750);
         myTama.noFun = setInterval(addBored, (rand + 100));
+        myTama.meow = setInterval(playMeow, 70);
     }
 }
 $("#startButton").click(myTama.gameBegin);
+playMeow = function playMeow() {
+    if (myTama.dog=="no") {
+        let audio = document.getElementById("meow");
+        audio.play(); 
+        }
+    else if (myTama.dog=="yes") {
+        let audio = document.getElementById("bark");
+        audio.play(); 
+    }
+}
 ageUp = function ageUp() {
     $("#tamaAge").html("<h2 id='tamaAge'>" + (myTama.age+1) + "&nbsp;</h2>");
     $("#ageBar>div").width(myTama.age + "%");
@@ -126,6 +139,7 @@ resize = function resize() {
     $("body").width(screenWidth);
 }
 easterEgg = function easterEgg() {
+    myTama.dog="yes";
     $(".display").html("<img src='https://data.whicdn.com/images/283530751/original.gif' alt='Kitten Gif' id='displayDog'>")
 }
 $(document).ready(function() {
