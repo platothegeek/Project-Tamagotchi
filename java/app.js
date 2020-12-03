@@ -92,7 +92,7 @@ checkVitals = function checkVitals() {
         clearInterval(myTama.noSleep);
         clearInterval(myTama.noFun);
         console.log("he like dead tho");
-        $("#deadNotification").html(myTama.name + " died of starvation. <br>You've been arrested for animal cruelty.")
+        $("#deadNotification").html(myTama.name + " died of starvation. <br>You've been arrested for<br> animal cruelty.")
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
     else if (myTama.sleep>=100) {

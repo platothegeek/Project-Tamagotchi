@@ -150,10 +150,11 @@ input {
   h3 {
     min-width: 50%;
     display: block;
-    font-size: 50px;
+    font-size: 40px;
     color: #800020;
     margin-right: 50%;
     font-family: 'Source Code Pro', monospace;
+    max-width: 15px;
   }
   body {
     background-color: rgb(107, 158, 253);
