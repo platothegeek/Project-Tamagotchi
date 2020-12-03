@@ -128,6 +128,27 @@ resize = function resize() {
 easterEgg = function easterEgg() {
     $(".display").html("<img src='https://data.whicdn.com/images/283530751/original.gif' alt='Kitten Gif' id='displayDog'>")
 }
+$(document).ready(function() {
+    if (window.location.hash) { 
+        $(document).scroll( function() {
+            let hash = window.location.hash
+            let hashID = hash.substring(1, hash.length);
+            let element;
+            if ($(hash).length != 0) {
+                element = $(hash);
+            }
+            else if ($('a[name="' + hashID + '"]').length != 0)
+            {
+            element = $('a[name="' + hashID + '"]:first');
+            }
+            if (element != undefined) {
+                window.scrollTo(0, element.position().top);
+            }
+            $(document).unbind("scroll");
+        });
+    }
+
+});
 $("#foodButton").click(clearHung);
 $("#sleepButton").click(clearTired);
 $("#playButton").click(clearBored);
