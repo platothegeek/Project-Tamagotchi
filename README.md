@@ -10,4 +10,13 @@ USER STORIES
 5) When I press the Feed, Sleep, or Play buttons it resets the respective counters to 0.
 <br>
 TECH USED
-<hr>
+<br>
+1) 
+<br>
+APPROACH TAKEN
+I took primarily an object oriented approach.
+<br>
+INSTALLATION INSTRUCTIONS
+<br>
+UNSOLVED PROBLEMS
+<br>

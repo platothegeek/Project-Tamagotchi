@@ -1,7 +1,7 @@
+// The rand variable is used in the bored interval to add a level of randomness to the game
 rand = (Math.floor((Math.random() * 400)));
-let screenWidth = window.outerWidth;
-
 let myTama = {
+    // I could not use a boolean because I would automatically switch to true partway through, I could not find any code that could do this so I just switched it a string and that worked
     dog: "no",
     name: 0,
     age: 0,
@@ -13,6 +13,7 @@ let myTama = {
     noSleep: 0,
     noFun: 0,
     meow: 0,
+    // gameBegin starts the game from the start button and ties the setIntervals to the last 5 variables so they can be cleared after the game ends.
     gameBegin: function gameBegin() {
         myTama.age=0;
         myTama.hunger=0;
@@ -20,6 +21,7 @@ let myTama = {
         myTama.bored=0;
         myTama.name = $("#tamaNameInput").val();
         $("#tamaName").html("<h2 id='tamaName'>" + myTama.name + "&nbsp;</h2>");
+        // The following 5 lines set the time frame to call each function, creating the increasing hunger, tiredness, and bored
         myTama.ager = setInterval(ageUp,20000);
         myTama.noFood = setInterval(addHung, 250);
         myTama.noSleep = setInterval(addTired, 750);
@@ -28,6 +30,7 @@ let myTama = {
     }
 }
 $("#startButton").click(myTama.gameBegin);
+//The playMeow function is used to play a meow or "bark" (really a croak) itermittently
 playMeow = function playMeow() {
     if (myTama.dog=="no") {
         let audio = document.getElementById("meow");
@@ -38,6 +41,7 @@ playMeow = function playMeow() {
         audio.play(); 
     }
 }
+//The following four functions increase they're respective variable in a similar fashion to each other.
 ageUp = function ageUp() {
     $("#tamaAge").html("<h2 id='tamaAge'>" + (myTama.age+1) + "&nbsp;</h2>");
     $("#ageBar>div").width(myTama.age + "%");
@@ -62,6 +66,7 @@ addBored = function addBored() {
     myTama.bored = myTama.bored + 1;
     checkVitals();
 }
+// The check vitals function is used to effectively test for death as well as execute age-related events such as the switching of the display photo
 checkVitals = function checkVitals() {
     if (myTama.age==50){
         $("#deadNotification").html(myTama.name + " is getting older.")
@@ -114,6 +119,7 @@ checkVitals = function checkVitals() {
         $(".display").html("<img src='https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg' alt='Kitten Gif' id='displayDead'>")
     }
 }
+// The following three functions are used to "feed" "put to sleep" "play with" the tamagotchi and reset the variables
 clearHung = function clearHung() {
     myTama.hunger = 0;
     let audio = document.getElementById("munch");
@@ -135,13 +141,12 @@ clearBored = function clearBored() {
     $("#boredBar").width(0);
     $("#tamaBoredom").html("<h2 id='tamaBoredom'>" + (myTama.bored) + "&nbsp;</h2>")
 }
-resize = function resize() {
-    $("body").width(screenWidth);
-}
+// The Easter Egg isn't much, more of a thing I added on at the end for fun, you trigger it by pressing the very small button near the button of the page
 easterEgg = function easterEgg() {
     myTama.dog="yes";
     $(".display").html("<img src='https://media0.giphy.com/media/fV2Tnvl2gULIA5qamy/giphy.gif' alt='Kitten Gif' id='displayDog'>")
 }
+// The following function is used to ensure that the page does not scroll on refresh, as with the overflow-x hidden it was impossible to scroll back. Inspired by and perhaps paraphrased from code found on stack overflow.
 $(document).ready(function() {
     if (window.location.hash) { 
         $(document).scroll( function() {
@@ -167,4 +172,3 @@ $("#foodButton").click(clearHung);
 $("#sleepButton").click(clearTired);
 $("#playButton").click(clearBored);
 $("#easterEggButton").click(easterEgg);
-resize();

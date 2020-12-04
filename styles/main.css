@@ -63,7 +63,7 @@ button:active {
     max-height: 425px;
 }
 #displayDog {
-    transform: translate(0%, 30%) rotate(90deg);
+    transform: translate(0%, 25%) rotate(90deg);
     max-height: 425px;
 }
 #displayOldDog {  
