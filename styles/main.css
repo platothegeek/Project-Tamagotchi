@@ -112,7 +112,7 @@ button:active {
     max-height: 25px;
     min-width: 0px;
     min-height: 0px;
-    transform: translate(5000%, 20000%);
+    transform: translate(3050%, 15000%);
 }
 #startLabel {
     transform: rotate(-90deg) translate(-50%, 100%);
@@ -159,4 +159,5 @@ input {
   body {
     background-color: rgb(107, 158, 253);
     overflow-x: hidden;
+    overflow-y: hidden;
   }
