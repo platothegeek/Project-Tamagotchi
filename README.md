@@ -1,10 +1,11 @@
 <h1>URL TO PROJECT</h1>
 https://pages.git.generalassemb.ly/platothegeek/Project-Tomagotchi/
+<br>
 WIREFRAME
-<hr>
+<br>
 <img src="Pictures/Screenshot 2020-11-30 154508.jpg" alt="Wireframe">
 <h1>USER STORIES</h1>
-<hr>
+<br>
 1) When the start button is pressed I can name the tamagotchi and the game begins.
 2) Every 20 seconds my Tamagochi ages until it reaches a maximum of 60, at which point it dies. If I was able to keep it alive up to this point an alert comes up congratulating me for winning and offering condolences for the lost pet.
 3) As time goes on my Tamagochi's hunger, boredom, and tiredness worsen, but the exact time it takes varies between 2-10 seconds.
