@@ -112,7 +112,7 @@ button:active {
     max-height: 25px;
     min-width: 0px;
     min-height: 0px;
-    transform: translate(3050%, 15000%);
+    transform: translate(2875%, 14000%);
 }
 #startLabel {
     transform: rotate(-90deg) translate(-50%, 100%);
