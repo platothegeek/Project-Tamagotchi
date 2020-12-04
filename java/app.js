@@ -20,7 +20,7 @@ let myTama = {
         myTama.bored=0;
         myTama.name = $("#tamaNameInput").val();
         $("#tamaName").html("<h2 id='tamaName'>" + myTama.name + "&nbsp;</h2>");
-        myTama.ager = setInterval(ageUp,20000);
+        myTama.ager = setInterval(ageUp,25);
         myTama.noFood = setInterval(addHung, 250);
         myTama.noSleep = setInterval(addTired, 750);
         myTama.noFun = setInterval(addBored, (rand + 100));
@@ -66,7 +66,7 @@ checkVitals = function checkVitals() {
     if (myTama.age==50){
         $("#deadNotification").html(myTama.name + " is getting older.")
         $("#displayKitten").replaceWith("<img src='https://media4.giphy.com/media/7Cr71vflxfGFO/source.gif' alt='Kitten Gif' id='displayCat'>")
-        $("#displayDog").replaceWith("<img src='https://i.gifer.com/1LFX.gif' alt='Kitten Gif' id='displayOldDog'>")
+        $("#displayDog").replaceWith("<img src='https://cdnb.artstation.com/p/assets/images/images/024/686/413/original/christiana-james-baby-yoda-bounce.gif?1583213245' alt='Kitten Gif' id='displayOldDog'>")
     }
     else if(myTama.bored==85){
         $("#deadNotification").html(myTama.name + "'s boredom is dangerously high.")
@@ -140,7 +140,7 @@ resize = function resize() {
 }
 easterEgg = function easterEgg() {
     myTama.dog="yes";
-    $(".display").html("<img src='https://data.whicdn.com/images/283530751/original.gif' alt='Kitten Gif' id='displayDog'>")
+    $(".display").html("<img src='https://media0.giphy.com/media/fV2Tnvl2gULIA5qamy/giphy.gif' alt='Kitten Gif' id='displayDog'>")
 }
 $(document).ready(function() {
     if (window.location.hash) { 
