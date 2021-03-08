@@ -1,7 +1,8 @@
+<h1>MVP PITCH</h1>
 <h1>URL TO PROJECT</h1>
 https://pages.git.generalassemb.ly/platothegeek/Project-Tomagotchi/
 <br>
-WIREFRAME
+<h1>WIREFRAME</h1>
 <br>
 <img src="Pictures/Screenshot 2020-11-30 154508.jpg" alt="Wireframe">
 <h1>USER STORIES</h1>
